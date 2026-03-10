@@ -1,1 +1,1 @@
-# KSeF-PL
+# Dokumentacja KSeF po Polsku
