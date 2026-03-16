@@ -33,51 +33,51 @@ Każdy miesiąc będzie posiadał swoją niezależną strukturę katalogów z wy
 
 ## Tworzenie tokenu w systemie KSeF
 
-Do poprawnego funkcjonowania narzędzia KSeF XML Download, niezbędne jest skonfigurowanie jednego z dwóch  mechanizmów uwierzytelniania w systemie KSeF:
+Do poprawnego funkcjonowania narzędzia [**KSeF XML Download**](https://github.com/sstybel/ksef-xml-download), niezbędne jest skonfigurowanie jednego z dwóch  mechanizmów uwierzytelniania w systemie **KSeF**:
 
-1.	Uwierzytelnianie certyfikatem;
+1.	Uwierzytelnianie Certyfikatem;
 2.	Uwierzytelnianie Tokenem;
 
-Na potrzeby tej automatyzacji wybrano metodę uwierzytelniania Tokenem.
+Na potrzeby tej automatyzacji wybrano metodę **uwierzytelniania Tokenem**.
 
 Możesz wykorzystać już posiadany token lub ze względów bezpieczeństwa wygenerować nowy token na potrzeby skryptu.
 
-W tym celu wchodzimy na stronę Krajowego Systemu e-Faktur – https://ksef.podatki.gov.pl/ i wybieramy przycisk „Zaloguj się do KSeF”.
-
+W tym celu wchodzimy na stronę [**Krajowego Systemu e-Faktur**](https://ksef.podatki.gov.pl/) – [**https://ksef.podatki.gov.pl/**](https://ksef.podatki.gov.pl/) i wybieramy przycisk **„Zaloguj się do KSeF”**.
+**
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/01.png)
 
-Przeniesie nas na stronę logowania, gdzie wybieramy kafelek „Uwierzytelnij się w Krajowym Systemie e-Faktur”.
+Przeniesie nas na stronę logowania, gdzie wybieramy kafelek **„`Uwierzytelnij się w Krajowym Systemie e-Faktur`”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/02.png)
 
-Jako sposób logowania wybieramy „Zaloguj przez login.gov.pl”.
+Jako sposób logowania wybieramy **„`Zaloguj przez login.gov.pl`”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/03.png)
 
-Następnie podajemy NIP podmiotu dla którego będziemy pobierać faktury KSeF i klikamy przycisk „Uwierzytelnij”.
+Następnie podajemy **NIP** podmiotu dla którego będziemy pobierać faktury **KSeF** i klikamy przycisk **„`Uwierzytelnij`”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/04.png)
 
-W kolejnym kroku wybieramy sposób logowania do usług Ministerstwa Finansów, np. z wykorzystaniem aplikacji mObywatel.
+W kolejnym kroku wybieramy sposób logowania do usług [**Ministerstwa Finansów**](https://www.gov.pl/web/finanse), np. z wykorzystaniem aplikacji [**mObywatel**](https://www.gov.pl/web/mobywatel).
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/05.png)
 
-Po uwierzytelnieniu, zalogowało nas w Krajowym Systemie e-Faktur – Aplikacja Podatnika KSeF, gdzie udajemy się do sekcji „Tokeny” i wybieramy „Generuj token”.
+Po uwierzytelnieniu, zalogowało nas w **Krajowym Systemie e-Faktur – Aplikacja Podatnika KSeF**, gdzie udajemy się do sekcji **„`Tokeny`”** i wybieramy **„`Generuj token`”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/06.png)
 
 Wypełniamy formularz podając:
 1.	Nazwę tokena;
 2.	Ustawiając uprawnienia dla tokena – zaznaczmy „przeglądanie faktur”;
-3.	Klikamy przycisk „Generuj token”.
+3.	Klikamy przycisk **„`Generuj token`”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/07.png)
 
-Jeśli nie pokaże się token, należy naciskać przycisk „Odśwież”, aż do momentu gdy zobaczymy token.
+Jeśli nie pokaże się token, należy naciskać przycisk **„`Odśwież`”**, aż do momentu gdy zobaczymy token.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/08.png)
 
-Przeważnie po jednym lub dwóch odświeżeniach zobaczymy nasz nowy token. Token jest wyświetlany tylko jeden raz, więc musisz go skopiować (przycisk „Kopiuj”) i zapisać w bezpiecznym miejscu, w przeciwnym razie, będziesz musiał go unieważnić i wygenerować ponownie – powtórzyć całą procedurę generowania tokenu od nowa.
+Przeważnie po jednym lub dwóch odświeżeniach zobaczymy nasz nowy token. Token jest wyświetlany tylko jeden raz, więc musisz go skopiować (przycisk **„`Kopiuj`”**) i zapisać w bezpiecznym miejscu, w przeciwnym razie, będziesz musiał go unieważnić i wygenerować ponownie – powtórzyć całą procedurę generowania tokenu od nowa.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/09.png)
 
