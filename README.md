@@ -22,7 +22,7 @@ W niniejszym dokumencie opisane zostanie użycie dwóch narzędzi do:
 1.	Pobierania faktur w formacie **XML KSeF** - [**KSeF XML Download**](https://github.com/sstybel/ksef-xml-download)
 2.	Generowania wizualizacji faktur w formacie PDF na podstawie faktur **XML KSeF** - [**KSeF PDF Generator**](https://github.com/sstybel/ksef-pdf-generator)
 
-Opracowanie skupia się na stworzeniu automatyzacji polegającej na cyklicznym (co 4h) sprawdzaniu dostępności faktur (sprzedażowych i zakupowych) w systemie **KSeF**. Jeśli pojawią się w systemie **KSeF** nowe faktury (sprzedażowe lub/i zakupowe), skrypt automatyzujący wykonuje następujące 3 czynności:
+Opracowanie skupia się na stworzeniu automatyzacji polegającej na cyklicznym (co 4h) sprawdzaniu dostępności nowych faktur (sprzedażowych i zakupowych) w systemie **KSeF**. Jeśli pojawią się w systemie **KSeF** nowe faktury (sprzedażowe lub/i zakupowe), skrypt automatyzujący wykonuje następujące 3 czynności:
 1.	Pobiera faktury **XML KSeF** sprzedażowe lub/i zakupowe do odpowiednich folderów, tj.:
     1.	Sprzedażowe: `[DYSK]:\[LOKALIZACJA]\[ROK]\[MIESIAC]\Faktury-Sprzedaz\` (np. `C:\KSeF\2026\03\Faktury-Sprzedaz\`);
     2. Zakupowe: `[DYSK]:\[LOKALIZACJA]\[ROK]\[MIESIAC]\Faktury-Zakupowe\` (np. `C:\KSeF\2026\03\Faktury-Zakupowe\`);
