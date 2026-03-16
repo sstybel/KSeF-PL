@@ -42,15 +42,15 @@ Na potrzeby tej automatyzacji wybrano metodę **uwierzytelniania Tokenem**.
 
 Możesz wykorzystać już posiadany token lub ze względów bezpieczeństwa wygenerować nowy token na potrzeby skryptu.
 
-W tym celu wchodzimy na stronę [**Krajowego Systemu e-Faktur**](https://ksef.podatki.gov.pl/) – [**https://ksef.podatki.gov.pl/**](https://ksef.podatki.gov.pl/) i wybieramy przycisk [**„`Zaloguj się do KSeF`”**](https://ap.ksef.mf.gov.pl/web/).
+W tym celu wchodzimy na stronę [**Krajowego Systemu e-Faktur**](https://ksef.podatki.gov.pl/) – [**https://ksef.podatki.gov.pl/**](https://ksef.podatki.gov.pl/) i wybieramy przycisk **„[`Zaloguj się do KSeF`](https://ap.ksef.mf.gov.pl/web/)”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/01.png)
 
-Przeniesie nas na stronę logowania, gdzie wybieramy kafelek [**„`Uwierzytelnij się w Krajowym Systemie e-Faktur`”**](https://ap.ksef.mf.gov.pl/web/).
+Przeniesie nas na stronę logowania, gdzie wybieramy kafelek **„[`Uwierzytelnij się w Krajowym Systemie e-Faktur`](https://ap.ksef.mf.gov.pl/web/)”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/02.png)
 
-Jako sposób logowania wybieramy **„`Zaloguj przez login.gov.pl`”**.
+Jako sposób logowania wybieramy **„[`Zaloguj przez login.gov.pl`](https://ap.ksef.mf.gov.pl/web/login)”**.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/03.png)
 
