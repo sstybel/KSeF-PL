@@ -7,7 +7,7 @@
 
 ## 📘 Spis treści
 
-- [Wstęp](#wstep)
+- [Wstęp](#wstęp)
 - [Tworzenie tokenu w systemie **KSeF**](#tworzenie-tokenu-w-systemie-ksef)
 - [Niezbędne narzędzia](#niezbędne-narzędzia)
 - [Pobieranie faktur w formacie **XML KSeF**](#pobieranie-faktur-w-formacie-xml-ksef)
