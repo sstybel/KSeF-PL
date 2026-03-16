@@ -42,7 +42,7 @@ Na potrzeby tej automatyzacji wybrano metodę **uwierzytelniania Tokenem**.
 
 Możesz wykorzystać już posiadany token lub ze względów bezpieczeństwa wygenerować nowy token na potrzeby skryptu.
 
-W tym celu wchodzimy na stronę [**Krajowego Systemu e-Faktur**](https://ksef.podatki.gov.pl/) – [**https://ksef.podatki.gov.pl/**](https://ksef.podatki.gov.pl/) i wybieramy przycisk **„Zaloguj się do KSeF”**.
+W tym celu wchodzimy na stronę [**Krajowego Systemu e-Faktur**](https://ksef.podatki.gov.pl/) – [**https://ksef.podatki.gov.pl/**](https://ksef.podatki.gov.pl/) i wybieramy przycisk **„`Zaloguj się do KSeF`”**.
 **
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/01.png)
 
