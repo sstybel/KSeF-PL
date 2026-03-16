@@ -33,6 +33,38 @@ Każdy miesiąc będzie posiadał swoją niezależną strukturę katalogów z wy
 
 ## Tworzenie tokenu w systemie KSeF
 
+Do poprawnego funkcjonowania narzędzia KSeF XML Download, niezbędne jest skonfigurowanie jednego z dwóch  mechanizmów uwierzytelniania w systemie KSeF:
+
+1.	Uwierzytelnianie certyfikatem;
+2.	Uwierzytelnianie Tokenem;
+
+Na potrzeby tej automatyzacji wybrano metodę uwierzytelniania Tokenem.
+
+Możesz wykorzystać już posiadany token lub ze względów bezpieczeństwa wygenerować nowy token na potrzeby skryptu.
+
+W tym celu wchodzimy na stronę Krajowego Systemu e-Faktur – https://ksef.podatki.gov.pl/ i wybieramy przycisk „Zaloguj się do KSeF”.
+
+Przeniesie nas na stronę logowania, gdzie wybieramy kafelek „Uwierzytelnij się w Krajowym Systemie e-Faktur”.
+
+Jako sposób logowania wybieramy „Zaloguj przez login.gov.pl”.
+
+Następnie podajemy NIP podmiotu dla którego będziemy pobierać faktury KSeF i klikamy przycisk „Uwierzytelnij”.
+
+W kolejnym kroku wybieramy sposób logowania do usług Ministerstwa Finansów, np. z wykorzystaniem aplikacji mObywatel.
+
+Po uwierzytelnieniu, zalogowało nas w Krajowym Systemie e-Faktur – Aplikacja Podatnika KSeF, gdzie udajemy się do sekcji „Tokeny” i wybieramy „Generuj token”.
+
+Wypełniamy formularz podając:
+1.	Nazwę tokena;
+2.	Ustawiając uprawnienia dla tokena – zaznaczmy „przeglądanie faktur”;
+3.	Klikamy przycisk „Generuj token”.
+
+Jeśli nie pokaże się token, należy naciskać przycisk „Odśwież”, aż do momentu gdy zobaczymy token.
+
+Przeważnie po jednym lub dwóch odświeżeniach zobaczymy nasz nowy token. Token jest wyświetlany tylko jeden raz, więc musisz go skopiować (przycisk „Kopiuj”) i zapisać w bezpiecznym miejscu, w przeciwnym razie, będziesz musiał go unieważnić i wygenerować ponownie – powtórzyć całą procedurę generowania tokenu od nowa.
+
+Masz wygenerowany token i możesz przystąpić do testów i konfiguracji skryptu.
+
 ## Niezbędne narzędzia
 
 ## Pobieranie faktur w formacie XML KSeF
