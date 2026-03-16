@@ -29,7 +29,7 @@ Opracowanie skupia się na stworzeniu automatyzacji polegającej na cyklicznym (
 2.	Uaktualnia bieżący (za dany miesiąc) wykaz faktur do pliku **CSV** i umieszcza go w katalogu: `[DYSK]:\[LOKALIZACJA]\[ROK]\[MIESIAC]\_KSeF_\ksef_output[ROK][MIESIAC].csv` (np. `C:\KSeF\2026\03\_KSeF_\ksef_output202603.csv`);
 3.	Generuje wizualizacje faktur w formacie **PDF** wg standardu **PDF/A-3** (**ISO 19005-3:2012**) na podstawie pobranych faktur w formacie **XML KSeF** i umieszcza je w tej samej lokalizacji – patrz punk 1.
 
-Każdy miesiąc będzie posiadał swoją niezależną strukturę katalogów z wykazem faktur **KSeF XML**, listą dokumentów w pliku **CSV** oraz reprezentacją wizualna faktur w formacie **PDF**.
+Każdy miesiąc będzie posiadał swoją niezależną strukturę katalogów z wykazem faktur **KSeF XML**, listą dokumentów w pliku **CSV** oraz reprezentacją wizualną faktur w formacie **PDF**.
 
 ## Tworzenie tokenu w systemie KSeF
 
