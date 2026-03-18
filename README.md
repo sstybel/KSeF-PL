@@ -288,6 +288,71 @@ Wykaz faktur został pobrany (lub uaktualniony) w pliku **`marzec_2026.csv`**.
 
 ## Generowanie wizualizacji faktur w formacie PDF
 
+Ostatnią czynność jaką wykonamy to generowanie wizualizacji faktur w formacie **PDF** wg standardu [**PDF/A-3**](https://pl.wikipedia.org/wiki/PDF/A#PDF/A-3) ([**ISO 19005-3:2012**](https://www.iso.org/standard/57229.html)) za miesiąc marzec 2026 (tj. 2026-03-01). 
+
+Wizualizacje faktur zostaną zapisane w tych samych folderach co faktury pobrane w formacie **XML KSeF**. Dodatkowo wygenerowane faktury w formacie [**PDF/A-3**](https://pl.wikipedia.org/wiki/PDF/A#PDF/A-3) zawierają osadzony plik **XML** faktury **KSeF**.
+
+W tym celu wykonujemy następujące polecenia:
+
+```
+PS M:\KSeF-Firma> .\ksef-pdf-generator.exe -s .\marzec_2026.json
+
+KSeF PDF Generator - ver. 1.3.5
+Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
+------------------------------------------------------------------------------
+
+State file provided: .\marzec_2026.json
+Processing state file: .\marzec_2026.json
+Added XML file from state: .\Faktury-Sprzedaz\1234567890-20260220-112233440000-12.xml
+
+.....
+
+Invoice version: FA (3)
+Generating PDF...
+PDF generated successfully: .\Faktury-Zakupy\1133557799-20260312-778899998877-11. pdf
+
+PS M:\KSeF-Firma> tree /f
+
+Folder PATH listing for volume DataSS
+Volume serial number is A4F7-F767
+M:.
+│   ksef-pdf-generator.exe
+│   ksef-xml-download.exe
+│   marzec_2026.csv
+│   marzec_2026.json
+│
+├───Faktury-Sprzedaz
+│       1234567890-20260220-112233440000-12.pdf
+│       1234567890-20260220-112233440000-12.xml
+│       1234567890-20260228-445566770000-34.pdf
+│       1234567890-20260228-445566770000-34.xml
+│       1234567890-20260309-889900AA0000-56.pdf
+│       1234567890-20260309-889900AA0000-56.xml
+│       1234567890-20260312-BBCCDDEE0000-78.pdf
+│       1234567890-20260312-BBCCDDEE0000-78.xml
+│
+├───Faktury-Zakupy
+│       1122334455-20260216-AA11BB22CC33-55.pdf
+│       1122334455-20260216-AA11BB22CC33-55.xml
+│       6677889900-20260221-BB00CC99DD88-44.pdf
+│       6677889900-20260221-BB00CC99DD88-44.xml
+│       1112223334-20260303-321123321123-33.pdf
+│       1112223334-20260303-321123321123-33.xml
+│       5556667778-20260309-456654456654-22.pdf
+│       5556667778-20260309-456654456654-22.xml
+│       1133557799-20260312-778899998877-11.pdf
+│       1133557799-20260312-778899998877-11.xml
+│
+└───Stan
+        ksef_state.json
+
+PS M:\KSeF-Firma>
+```
+
+Faktury w formacie **PDF** zostały wygenerowane.
+
+![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/11.png)
+
 ## Skrypt automatyzujący proces pobierania i generowania dokumentów z KSeF w PowerShell
 
 ## Tworzenie harmonogramu zadań w systemie Windows realizującego automatyzację
