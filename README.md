@@ -122,6 +122,105 @@ W ten sposób mamy przegotowane środowisko do dalszej pracy.
 
 ## Pobieranie faktur w formacie XML KSeF
 
+Pierwszą czynność jaką wykonamy to pobierzemy faktur zakupowe (**Subject2**) i sprzedażowe (**Subject1**) za miesiąc marzec 2026 (tj. 2026-03-01). Faktury w formacie **XML KSeF** zostaną zapisane do odpowiednich katalogów, np.:
+
+1.	Zakupowe (**Subject2**) - `M:\KSeF-Firma\Faktury-Zakupy\`
+2.	Sprzedażowe (**Subject1**) - `M:\KSeF-Firma\Faktury-Sprzedaz\`
+
+W tym celu wykonujemy następujące polecenia:
+
+```
+PS M:\KSeF-Firma> mkdir Faktury-Sprzedaz
+
+PS M:\KSeF-Firma> mkdir Faktury-Zakupy
+
+PS M:\KSeF-Firma> dir
+
+
+    Directory: M:\KSeF-Firma
+
+
+Mode         LastWriteTime     Length  Name
+----         -------------     ------  ----
+d-----   18.03.2026  18:19             Faktury-Sprzedaz
+d-----   18.03.2026  18:19             Faktury-Zakupy
+-a----   18.03.2026  17:01   41687053  ksef-pdf-generator.exe
+-a----   18.03.2026  16:58   19273120  ksef-xml-download.exe
+
+
+PS M:\KSeF-Firma> .\ksef-xml-download.exe --nip 1234567890 --token "20260201-EC-1A2B3C4D5E-1122334455-AB|nip-1234567890|11aa22bb33cc44dd55ee66ff77aa88bb99cc00dd11ee22ff33aa44bb55cc66dd" --subject-type Subject1and2 --download-xml --xml-sub1-output-dir .\Faktury-Sprzedaz --xml-sub2-output-dir .\Faktury-Zakupy --ksef-state-dir .\Stan --output json --output-filename marzec_2026.json --output-append --output-dir .\
+
+KSeF XML Invoices Downloader - ver. 1.30
+Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
+--------------------------------------------------------------------
+
+Connecting to KSeF system (environment: prod)...
+NIP (Tax ID): 1234567890
+Authentication method: token
+Session initialized. Reference number: 20260318-AA-1122334455-AABBCCDDEE-FF
+
+Downloading invoices issued (sales) and received (purchases) - Subject1 and Subject2...
+No existing KSeF state found at: .\Stan\ksef_state.json. A new state file will be created at: .\Stan\ksef_state.json
+KSeF state saved to: .\Stan\ksef_state.json
+{
+    "Subject1": [
+        {
+.....
+		}
+    ],
+    "Subject2": [
+        {
+.....
+        }
+    ]
+}
+
+Downloading KSeF XML file(s) from issued (sales) - Subject1 to: .\Faktury-Sprzedaz
+  Downloaded: .\Faktury-Sprzedaz\1234567890-20260220-112233440000-12.xml
+  Downloaded: .\Faktury-Sprzedaz\1234567890-20260228-445566770000-34.xml
+  Downloaded: .\Faktury-Sprzedaz\1234567890-20260309-889900AA0000-56.xml
+  Downloaded: .\Faktury-Sprzedaz\1234567890-20260312-BBCCDDEE0000-78.xml
+
+Downloading KSeF XML file(s) from received (purchases) - Subject2 to: .\Faktury-Zakupy
+  Downloaded: .\Faktury-Zakupy\1122334455-20260216-AA11BB22CC33-55.xml
+  Downloaded: .\Faktury-Zakupy\6677889900-20260221-BB00CC99DD88-44.xml
+  Downloaded: .\Faktury-Zakupy\1112223334-20260303-321123321123-33.xml
+  Downloaded: .\Faktury-Zakupy\5556667778-20260309-456654456654-22.xml
+  Downloaded: .\Faktury-Zakupy\1133557799-20260312-778899998877-11.xml
+
+Ending session...
+Session ended.
+
+PS M:\KSeF-Firma> tree /f
+
+Folder PATH listing for volume DataSS
+Volume serial number is A4F7-F767
+M:.
+│   ksef-pdf-generator.exe
+│   ksef-xml-download.exe
+│   marzec_2026.json
+│
+├───Faktury-Sprzedaz
+│       1234567890-20260220-112233440000-12.xml
+│       1234567890-20260228-445566770000-34.xml
+│       1234567890-20260309-889900AA0000-56.xml
+│       1234567890-20260312-BBCCDDEE0000-78.xml
+│
+├───Faktury-Zakupy
+│       1122334455-20260216-AA11BB22CC33-55.xml
+│       6677889900-20260221-BB00CC99DD88-44.xml
+│       1112223334-20260303-321123321123-33.xml
+│       5556667778-20260309-456654456654-22.xml
+│       1133557799-20260312-778899998877-11.xml
+│
+└───Stan
+        ksef_state.json
+
+PS M:\KSeF-Firma>
+```
+
+Faktury w formacie **XML KSeF** zostały pobrane.
+
 ## Pobieranie wykazu faktur w formacie CSV
 
 ## Generowanie wizualizacji faktur w formacie PDF
