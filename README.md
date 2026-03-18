@@ -2,7 +2,6 @@
 
 <a href="https://github.com/sstybel/KSeF-PL/releases/latest"><img alt="Static Badge" src="https://img.shields.io/badge/download-red?style=for-the-badge&label=stable&color=%23FF0000&link=https%3A%2F%2Fgithub.com%2Fsstybel%2FKSeF-PL%2Freleases%2Flatest"></a> ![GitHub Release](https://img.shields.io/github/v/release/sstybel/KSeF-PL?sort=date&display_name=release&style=for-the-badge&logo=github&label=release&link=https%3A%2F%2Fgithub.com%2Fsstybel%2FKSeF-PL) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/sstybel/KSeF-PL/total?style=for-the-badge&logo=github&link=https%3A%2F%2Fgithub.com%2Fsstybel%2FKSeF-PL)
 
-
 ---
 
 ## 📘 Spis treści
@@ -84,6 +83,42 @@ Przeważnie po jednym lub dwóch odświeżeniach zobaczymy nasz nowy token. Toke
 Masz wygenerowany token i możesz przystąpić do testów i konfiguracji skryptu.
 
 ## Niezbędne narzędzia
+
+Do wykonania automatyzacji, jak wspomniano we wstępie, potrzebne będą dwa narzędzia, które pobieramy z repozytorium [**GitHub**](https://github.com/sstybel):
+
+1.	[**KSeF XML Download**](https://github.com/sstybel/ksef-xml-download/) - https://github.com/sstybel/ksef-xml-download/releases/latest
+2.	[**KSeF PDF Generator**](https://github.com/sstybel/ksef-pdf-generator/) - https://github.com/sstybel/ksef-pdf-generator/releases/latest 
+
+W tym celu tworzymy np. katalog **`KSeF-Firma`** w katalogu głównym na dysku **`M:\`**, w której to lokalizacji zapisujemy pobrane wcześniej z repozytorium [**GitHub**](https://github.com/sstybel) pliki wykonywalne `.exe`. Do tego celu używam powłoki [**Windows PowerShell**](https://learn.microsoft.com/pl-pl/powershell/scripting/what-is-windows-powershell?view=powershell-7.5).
+
+```
+PS C:\> m:
+
+PS M:\> cd \
+
+PS M:\> mkdir KSeF-Firma
+
+PS M:\> cd KSeF-Firma
+
+PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-xml-download/releases/download/1.30/ksef-xml-download.exe -OutFile .\ksef-xml-download.exe
+
+PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-pdf-generator/releases/download/1.3.5/ksef-pdf-generator.exe -OutFile .\ksef-pdf-generator.exe
+
+PS M:\KSeF-Firma> dir
+
+PS M:\KSeF-Firma> dir
+
+    Directory: M:\KSeF-Firma
+
+Mode                  LastWriteTime         Length     Name
+-----                 -------------         -------    -----
+-a----                18.03.2026  12:00     41687053   ksef-pdf-generator.exe
+-a----                18.03.2026  12:00     19273120   ksef-xml-download.exe
+
+PS M:\KSeF-Firma>
+```
+
+W ten sposób mamy przegotowane środowisko do dalszej pracy.
 
 ## Pobieranie faktur w formacie XML KSeF
 

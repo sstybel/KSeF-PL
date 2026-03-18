@@ -27,6 +27,14 @@ $KSeFOutputJSON = "$KSeFJSONOutputDIR$KSeFOutputFileNameJSON" # Lokalizacja i na
 $KSeFInvSub1DIR = "$LocDIR/$ROK/$MIE/Faktury-Sprzedaz/" # Ścieżka do katalogu, gdzie mają być pobierane faktury sprzedażowe (KSeF - Subject1)
 $KSeFInvSub2DIR = "$LocDIR/$ROK/$MIE/Faktury-Zakupowe/" # Ścieżka do katalogu, gdzie mają być pobierane faktury zakupowe (KSeF - Subject2)
 
+# Tworzenie struktury katalogowej
+$NewDir = New-Item -ItemType Directory -Path $KSeFCSVOutputDIR -Force -ErrorAction SilentlyContinue
+$NewDir = New-Item -ItemType Directory -Path $KSeFJSONOutputDIR -Force -ErrorAction SilentlyContinue
+$NewDir = New-Item -ItemType Directory -Path $KSeFCSVStateDIR -Force -ErrorAction SilentlyContinue
+$NewDir = New-Item -ItemType Directory -Path $KSeFJSONStateDIR -Force -ErrorAction SilentlyContinue
+$NewDir = New-Item -ItemType Directory -Path $KSeFInvSub1DIR -Force -ErrorAction SilentlyContinue
+$NewDir = New-Item -ItemType Directory -Path $KSeFInvSub2DIR -Force -ErrorAction SilentlyContinue
+
 # Pobieranie faktur sprzedażowych i zakupowych w formacie KSeF XML
 & $LocDIR/_Apps_/ksef-xml-download.exe --nip $KSeFNIP --token $KSeFToken --subject-type Subject1and2 --download-xml --xml-sub1-output-dir $KSeFInvSub1DIR --xml-sub2-output-dir $KSeFInvSub2DIR --ksef-state-dir $KSeFJSONStateDIR --output json --output-filename $KSeFOutputFileNameJSON --output-append --output-dir $KSeFJSONOutputDIR --date-from $KSeFDownloadStart $QUIET
 
