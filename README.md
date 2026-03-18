@@ -235,6 +235,57 @@ Faktury w formacie **XML KSeF** zostały pobrane.
 
 ## Pobieranie wykazu faktur w formacie CSV
 
+Kolejną czynność jaką wykonamy to pobranie wykazu faktur za miesiąc marzec 2026 (tj. 2026-03-01). Wykaz faktur zostanie zapisany do pliku w formacie **CSV** (**`marzec_2026.csv`**), który można będzie otworzyć w programie **Excel** w celu dalszej analizy.
+
+W tym celu wykonujemy następujące polecenia:
+
+```
+PS M:\KSeF-Firma> .\ksef-xml-download.exe --nip 1234567890 `
+--token "20260201-EC-1A2B3C4D5E-1122334455-AB|nip-1234567890|11aa22bb33cc44dd55ee66ff77aa88bb99cc00dd11ee22ff33aa44bb55cc66dd" `
+--subject-type Subject1and2 `
+--output csv `
+--output-filename marzec_2026.csv `
+--output-append `
+--output-dir .\ `
+--xml-sub1-output-dir .\Faktury-Sprzedaz `
+--xml-sub2-output-dir .\Faktury-Zakupy
+
+KSeF XML Invoices Downloader - ver. 1.30
+Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
+--------------------------------------------------------------------
+
+Connecting to KSeF system (environment: prod)...
+NIP (Tax ID): 1234567890
+Authentication method: token
+Session initialized. Reference number: 20260318-CC-9988776655-FFAADDEECC-55
+
+Downloading invoices issued (sales) and received (purchases) - Subject1 and Subject2...
+"ksefSubjectType";"ksefNumber";"formSystemCode";"formSchemaVersion";"formValue";"invoiceNumber";"invoiceIssueDate";"invoiceCurrency";"invoiceType";"invoicingMode";"invoiceHash";"sellerNIP";"sellerName";"buyerIdType";"buyerIdValue";"buyerName";"netAmount";"vatAmount";"grossAmount";"qrCode";"fileName"
+
+…..
+
+Ending session...
+Session ended.
+
+PS M:\KSeF-Firma> dir
+
+    Directory: M:\KSeF-Firma
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        18.03.2026     19:27                Faktury-Sprzedaz
+d-----        18.03.2026     19:27                Faktury-Zakupy
+d-----        18.03.2026     19:27                Stan
+-a----        18.03.2026     17:01       41687053 ksef-pdf-generator.exe
+-a----        18.03.2026     16:58       19273120 ksef-xml-download.exe
+-a----        18.03.2026     19:31           4608 marzec_2026.csv
+-a----        18.03.2026     19:27          14325 marzec_2026.json
+```
+
+Wykaz faktur został pobrany (lub uaktualniony) w pliku **`marzec_2026.csv`**.
+
+![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/10.png)
+
 ## Generowanie wizualizacji faktur w formacie PDF
 
 ## Skrypt automatyzujący proces pobierania i generowania dokumentów z KSeF w PowerShell
