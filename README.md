@@ -100,9 +100,11 @@ PS M:\> mkdir KSeF-Firma
 
 PS M:\> cd KSeF-Firma
 
-PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-xml-download/releases/download/1.30/ksef-xml-download.exe -OutFile .\ksef-xml-download.exe
+PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-xml-download/releases/download/1.30/ksef-xml-download.exe `
+-OutFile .\ksef-xml-download.exe
 
-PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-pdf-generator/releases/download/1.3.5/ksef-pdf-generator.exe -OutFile .\ksef-pdf-generator.exe
+PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-pdf-generator/releases/download/1.3.5/ksef-pdf-generator.exe `
+-OutFile .\ksef-pdf-generator.exe
 
 PS M:\KSeF-Firma> dir
 
@@ -148,7 +150,17 @@ d-----   18.03.2026  18:19             Faktury-Zakupy
 -a----   18.03.2026  16:58   19273120  ksef-xml-download.exe
 
 
-PS M:\KSeF-Firma> .\ksef-xml-download.exe --nip 1234567890 --token "20260201-EC-1A2B3C4D5E-1122334455-AB|nip-1234567890|11aa22bb33cc44dd55ee66ff77aa88bb99cc00dd11ee22ff33aa44bb55cc66dd" --subject-type Subject1and2 --download-xml --xml-sub1-output-dir .\Faktury-Sprzedaz --xml-sub2-output-dir .\Faktury-Zakupy --ksef-state-dir .\Stan --output json --output-filename marzec_2026.json --output-append --output-dir .\
+PS M:\KSeF-Firma> .\ksef-xml-download.exe --nip 1234567890 `
+--token "20260201-EC-1A2B3C4D5E-1122334455-AB|nip-1234567890|11aa22bb33cc44dd55ee66ff77aa88bb99cc00dd11ee22ff33aa44bb55cc66dd" `
+--subject-type Subject1and2 `
+--download-xml `
+--xml-sub1-output-dir .\Faktury-Sprzedaz `
+--xml-sub2-output-dir .\Faktury-Zakupy `
+--ksef-state-dir .\Stan `
+--output json `
+--output-filename marzec_2026.json `
+--output-append `
+--output-dir .\
 
 KSeF XML Invoices Downloader - ver. 1.30
 Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
