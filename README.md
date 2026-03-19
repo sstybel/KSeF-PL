@@ -100,10 +100,10 @@ PS M:\> mkdir KSeF-Firma
 
 PS M:\> cd KSeF-Firma
 
-PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-xml-download/releases/download/1.30/ksef-xml-download.exe `
+PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-xml-download/releases/download/1.40/ksef-xml-download.exe `
 -OutFile .\ksef-xml-download.exe
 
-PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-pdf-generator/releases/download/1.3.5/ksef-pdf-generator.exe `
+PS M:\KSeF-Firma> Invoke-WebRequest https://github.com/sstybel/ksef-pdf-generator/releases/download/1.4.0/ksef-pdf-generator.exe `
 -OutFile .\ksef-pdf-generator.exe
 
 PS M:\KSeF-Firma> dir
@@ -114,7 +114,7 @@ PS M:\KSeF-Firma> dir
 
 Mode                  LastWriteTime         Length     Name
 -----                 -------------         -------    -----
--a----                18.03.2026  12:00     41687053   ksef-pdf-generator.exe
+-a----                18.03.2026  12:00     41685797   ksef-pdf-generator.exe
 -a----                18.03.2026  12:00     19273120   ksef-xml-download.exe
 
 PS M:\KSeF-Firma>
@@ -146,7 +146,7 @@ Mode         LastWriteTime     Length  Name
 ----         -------------     ------  ----
 d-----   18.03.2026  18:19             Faktury-Sprzedaz
 d-----   18.03.2026  18:19             Faktury-Zakupy
--a----   18.03.2026  17:01   41687053  ksef-pdf-generator.exe
+-a----   18.03.2026  17:01   41685797  ksef-pdf-generator.exe
 -a----   18.03.2026  16:58   19273120  ksef-xml-download.exe
 
 
@@ -162,7 +162,7 @@ PS M:\KSeF-Firma> .\ksef-xml-download.exe --nip 1234567890 `
 --output-append `
 --output-dir .\
 
-KSeF XML Invoices Downloader - ver. 1.30
+KSeF XML Invoices Downloader - ver. 1.40
 Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
 --------------------------------------------------------------------
 
@@ -250,7 +250,7 @@ PS M:\KSeF-Firma> .\ksef-xml-download.exe --nip 1234567890 `
 --xml-sub1-output-dir .\Faktury-Sprzedaz `
 --xml-sub2-output-dir .\Faktury-Zakupy
 
-KSeF XML Invoices Downloader - ver. 1.30
+KSeF XML Invoices Downloader - ver. 1.40
 Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
 --------------------------------------------------------------------
 
@@ -276,7 +276,7 @@ Mode                 LastWriteTime         Length Name
 d-----        18.03.2026     19:27                Faktury-Sprzedaz
 d-----        18.03.2026     19:27                Faktury-Zakupy
 d-----        18.03.2026     19:27                Stan
--a----        18.03.2026     17:01       41687053 ksef-pdf-generator.exe
+-a----        18.03.2026     17:01       41685797 ksef-pdf-generator.exe
 -a----        18.03.2026     16:58       19273120 ksef-xml-download.exe
 -a----        18.03.2026     19:31           4608 marzec_2026.csv
 -a----        18.03.2026     19:27          14325 marzec_2026.json
@@ -297,7 +297,7 @@ W tym celu wykonujemy następujące polecenia:
 ```
 PS M:\KSeF-Firma> .\ksef-pdf-generator.exe -s .\marzec_2026.json
 
-KSeF PDF Generator - ver. 1.3.5
+KSeF PDF Generator - ver. 1.4.0
 Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl
 ------------------------------------------------------------------------------
 
