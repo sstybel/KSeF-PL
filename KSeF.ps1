@@ -1,8 +1,9 @@
-Clear-Host
+Clear-Host # Czyścimy ekran
 
 $QUIET = "" # Pokazuj komunikaty na ekranie
 #$QUIET = "--quiet" # Odkomentuj jeśli chcesz włączyć tryb cichy - bez pokazywania komunikatów na ekranie
 
+# Ekran powitalny
 if ($QUIET -eq "") {
     Write-Host "Pobieranie faktur z systemu KSeF"
     Write-Host "Copyright (c) 2025 - 2026 by Sebastian Stybel, www.BONO-IT.pl"
