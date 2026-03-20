@@ -307,7 +307,7 @@ Opis pół nagłowka **CSV** jest następujący:
 - **netAmount** - Wartość netto, ogółem netto faktury;
 - **vatAmount** - Wartość VAT, ogółem VAT faktury;
 - **grossAmount** - Wartość brutto, ogółem brutto faktury - Wartość netto + Wartość VAT;
-- **qrCode** - Link do strony internetowej systemu **KSeF** weryfikującej wystawienie faktury przez system **KSeF**;
+- **qrCode** - Link do strony internetowej systemu **KSeF** weryfikującej wystawienie faktury w systemie **KSeF**;
 - **fileName** - Lokalizacja pliku faktury **XML KSeF**.
 
 ## Generowanie wizualizacji faktur w formacie PDF
