@@ -471,7 +471,7 @@ $QUIET
 $QUIET
 ```
 
-cały skrypt można pobrać z repozytorium [**KSeF.ps1**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1).
+Kompletny skrypt można pobrać z repozytorium [**KSeF.ps1**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1).
 
 ## Tworzenie harmonogramu zadań w systemie Windows realizującego automatyzację
 
@@ -485,7 +485,7 @@ Jeśli chodzi o wywoływanie skryptu napisanego w [**Windows PowerShell**](https
 - Dodaj argumenty (opcjonalnie): **`-ExecutionPolicy Bypass M:\KSeF-Firma\KSeF.ps1`**
 - Rozpocznij w (opcjonalnie): **`M:\KSeF-Firma\`**
 
-wyeksportowane zadanie harmonogramu zadań możesz pobrać z repozytorium [**BONO-IT_KSeF.xml**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1).
+Wyeksportowane zadanie harmonogramu zadań możesz pobrać z repozytorium [**BONO-IT_KSeF.xml**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1).
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/12.png)
 
