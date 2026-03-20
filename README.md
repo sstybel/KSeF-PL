@@ -353,6 +353,30 @@ Faktury w formacie **PDF** zostały wygenerowane.
 
 ![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/11.png)
 
+Opis pół nagłowka **CSV** jest następujący:
+- **ksefSubjectType** - Typ faktury **KSeF**: **Subject1** (faktura sprzedażowa), **Subject2** (faktura zakupowa);
+- **ksefNumber** - Numer  faktury nadany przez system **KSeF**;
+- **formSystemCode** - Kod faktury **KSeF** (wersja);
+- **formSchemaVersion** - Schemat wersji faktury **KSeF**;
+- **formValue** - Rodzaj formularza **KSeF**;
+- **invoiceNumber** - Numer faktury nadany przez wystawiającego fakturę;
+- **invoiceIssueDate** - Data wystawienia faktury;
+- **invoiceInvoicingDate** - Data nadania nr **KSeF**;
+- **invoiceCurrency** - Waluta, np. PLN;
+- **invoiceType** - Typ faktury, np. VAT;
+- **invoicingMode** - Tryb wystawienia faktury: **Online**, **Offline**;
+- **invoiceHash** - Hash (skrót / "odcisk palca") faktury;
+- **sellerNIP** - NIP sprzedawcy;
+- **sellerName** - Nazwa sprzedawcy;
+- **buyerIdType** - Typ identyfikatora kupującego, np. NIP;
+- **buyerIdValue** - Identyfikator kupującego. Jeśli typ identyfikatora kupującego to NIP, to identyfikator kupującego jest numerem NIP;
+- **buyerName** - Nazwa kupującego;
+- **netAmount** - Wartość netto, ogółem netto faktury;
+- **vatAmount** - Wartość VAT, ogółem VAT faktury;
+- **grossAmount** - Wartość brutto, ogółem brutto faktury - Wartość netto + Wartość VAT;
+- **qrCode** - Link do strony internetowej systemu **KSeF** weryfikującej wystawienie faktury przez system **KSeF**;
+- **fileName** - Lokalizacja pliku faktury **XML KSeF**.
+
 ## Skrypt automatyzujący proces pobierania i generowania dokumentów z KSeF w PowerShell
 
 ## Tworzenie harmonogramu zadań w systemie Windows realizującego automatyzację
