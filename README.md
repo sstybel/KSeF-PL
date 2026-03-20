@@ -471,9 +471,23 @@ $QUIET
 $QUIET
 ```
 
-cały skrypt można pobrać z repozytorium [**KSeF.ps1**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1)
+cały skrypt można pobrać z repozytorium [**KSeF.ps1**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1).
 
 ## Tworzenie harmonogramu zadań w systemie Windows realizującego automatyzację
+
+Finalnie należy skrypt wprawić w *"ruch"*, czyli wyzwalać (uruchamiać) go cyklicznie. W systemie [**Microsoft Windows**](https://www.microsoft.com/pl-pl/windows) mamy harmonogram zadań, w którym stworzymy cykliczne zadanie.
+
+Cykliczność zadania nie może być zbyt duża, gdyż system **KSeF** ma zabezpieczenie przed przeciążeniem systemu przed nadmierną ilością wywołań. Jednak najbardziej rozsądnym czasem kolejnych wywoływań jest ustawienie tego czasu na **2h** - **4h**, czyli od 12 do 6 uruchomień na dobę - jeśli komputer będzie włączony 24h na dobę.
+
+Jeśli chodzi o wywoływanie skryptu napisanego w [**Windows PowerShell**](https://learn.microsoft.com/pl-pl/powershell/scripting/what-is-windows-powershell?view=powershell-7.5) w zadaniu harmonogramu zadań, to na zakładce zadania w części **Akcje**, należy w następujący sposób wypełnić formularz:
+
+- Program/skrypt: **`Powershell.exe`**
+- Dodaj argumenty (opcjonalnie): **`-ExecutionPolicy Bypass M:\KSeF-Firma\KSeF.ps1`**
+- Rozpocznij w (opcjonalnie): **`M:\KSeF-Firma\`**
+
+wyeksportowane zadanie harmonogramu zadań możesz pobrać z repozytorium [**BONO-IT_KSeF.xml**](https://github.com/sstybel/KSeF-PL/blob/main/KSeF.ps1).
+
+![Screen-Shot](https://github.com/sstybel/KSeF-PL/blob/main/images/12.png)
 
 ---
 
